@@ -7,7 +7,7 @@
 # Prepare the source by getting any external scripts need to build an ISO.
 
 cd $(dirname "$0")
-./.getsalt-scripts.sh "$@" || exit 1
+sh ./.getsalt-scripts.sh "$@" || exit 1
 for a in 32 64 arm; do
   if [ -d $a ]; then
     for f in common/*; do
