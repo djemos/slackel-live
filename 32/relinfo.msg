@@ -1,0 +1,1 @@
+../common/relinfo.msg

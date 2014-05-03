@@ -1,0 +1,6 @@
+module=core,packages-core
+module=basic,packages-basic
+module=full,packages-full
+module=common,packages-common
+module=kernel,packages-kernel
+module=live,packages-live
