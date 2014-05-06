@@ -1,7 +1,7 @@
 # vim: set syn=sh:
 if [ -z "$DISTRO" ]; then
   DISTRO=slackel
-  VER=openbox-6.0-32
+  VER=kde-4.10.5-32
   # empty for a final release for example
   #RLZ=$(date -Iminutes)
   RLZ=
@@ -26,6 +26,6 @@ if [ -z "$DISTRO" ]; then
   export FUFSVER
   export FUFSURL
   export ISO_NAME
-  #export KERNELPKGNAME
+  export KERNELPKGNAME
   export COMP
 fi

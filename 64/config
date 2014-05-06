@@ -1,7 +1,7 @@
 # vim: set syn=sh:
 if [ -z "$DISTRO" ]; then
   DISTRO=slackel
-  VER=openbox-6.0-64
+  VER=kde-4.10.5-64
   # empty for a final release for example
   #RLZ=$(date -Iminutes)
   RLZ=
