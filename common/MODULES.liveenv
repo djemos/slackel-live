@@ -3,11 +3,12 @@ hostname
 ssh
 alias
 avahi
-gdm
-user-settings-openbox
-dmrc-openbox
+kdm
+user-settings-kde
+dmrc-kde
 xscreensaver-disable
+firefox-profile
+firefox-default
 salixlive-logo
 slackellive-installer
-gmountman
-nokde-desktop
+onlykde-desktop
