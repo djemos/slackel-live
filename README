@@ -6,3 +6,46 @@ create a slackel live iso
 Configuration files for Slackel Live.
 
 The master branch is also the openbox branch.
+
+To build the live iso
+Open a terminal and type
+su
+slapt-get -i slackware-live 
+to install slackware-live tool which is used to create the initrd and build the iso
+You can download and install the tool also from this repo.
+sli package will be automatically download and installed from repos running getpkgs.sh later. 
+Of cource you can download sli from this repo, build it and copy it to local folder.
+
+
+for openbox
+git clone https://github.com/djemos/slackel-live.git 
+
+or for KDE
+git clone https://github.com/djemos/slackel-live.git -b kde 
+
+cd slackel-live
+sh .getsalt-scripts.sh master
+
+cd 64 
+or 
+cd 32 
+
+to build a 64 or 32 bit iso.
+You have to be on an 32 or 64 bit slackel system, to build the 32 or 64 bit iso.
+
+sudo getpkgs.sh
+or 
+su
+./getpkgs.sh
+
+to build the iso
+sudo build-iso.sh
+or
+./build-iso.sh
+
+You will find the iso in the 64 or 32 bit folder.
+
+You can put your package lists in core, basic, full, common, live to build another iso for mate, lxde etc In this case you have also have to make the user-settings etc packages
+(look on common folder)
+
+
