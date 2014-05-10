@@ -48,6 +48,6 @@ You will find the iso in the 64 or 32 bit folder.
 
 You can put your package lists in core, basic, full, common, live to build another iso for mate, lxde etc
 In this case you have to make the user-settings etc packages
-(look on common folder)
+(look on packages-common lists)
 
 
