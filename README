@@ -21,6 +21,7 @@ build it and copy the txz package to local folder.
 
 You will also need to install unionfs-fuse from this repo https://github.com/djemos/unionfs-fuse.git 
 or just install it from repos with slapt-get -i unionfs-fuse
+
 for openbox
 git clone https://github.com/djemos/slackel-live.git 
 
