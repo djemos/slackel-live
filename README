@@ -19,6 +19,7 @@ sli package will be automatically download and installed from repos running getp
 Of cource you can download sli from this repo https://github.com/djemos/slackel-live-installer.git 
 build it and copy the txz package to local folder.
 
+You will also need to install unionfs-fuse from this repo https://github.com/djemos/unionfs-fuse.git 
 
 for openbox
 git clone https://github.com/djemos/slackel-live.git 
