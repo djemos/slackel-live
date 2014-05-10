@@ -13,6 +13,8 @@ su
 slapt-get -i slackware-live
 to install slackware-live tool which is used to create the initrd and build the iso
 You can download and install the tool also from this repo https://github.com/djemos/slackware-live.git
+and copy it to local folder.
+
 sli package will be automatically download and installed from repos running getpkgs.sh later.
 Of cource you can download sli from this repo https://github.com/djemos/slackel-live-installer.git
 build it and copy it to local folder.
@@ -48,5 +50,5 @@ You will find the iso in the 64 or 32 bit folder.
 
 You can put your package lists in core, basic, full, common, live to build another iso for mate, lxde etc
 In this case you have to make the user-settings etc packages
-(look on common folder)
+(look on packages-common lists)
 
