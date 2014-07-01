@@ -170,6 +170,7 @@ listres
 luit
 lxappearance
 lxmenu-data
+lxterminal
 makedepend
 mate-colors-icon-theme
 mate-dialogs
@@ -215,7 +216,6 @@ rendercheck
 renderproto
 resourceproto
 rgb
-sakura
 salix-artwork
 salixtools-gtk
 samba
