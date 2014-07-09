@@ -175,6 +175,7 @@ makedepend
 mate-colors-icon-theme
 mate-dialogs
 mate-icon-theme
+mate-notification-daemon
 menu-cache
 mesa
 midori
