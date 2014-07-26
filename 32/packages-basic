@@ -406,3 +406,7 @@ xvinfo
 xwd
 xwininfo
 xwud
+dri3proto
+libevdev
+libxshmfence
+presentproto
