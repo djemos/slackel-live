@@ -410,3 +410,7 @@ dri3proto
 libevdev
 libxshmfence
 presentproto
+dri3proto
+libevdev
+libxshmfence
+presentproto
