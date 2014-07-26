@@ -371,3 +371,7 @@ libXaw
 libaio
 hunspell
 xterm
+dri3proto
+libevdev
+libxshmfence
+presentproto
