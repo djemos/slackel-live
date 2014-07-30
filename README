@@ -29,7 +29,7 @@ or for KDE
 git clone https://github.com/djemos/slackel-live.git -b kde 
 
 cd slackel-live
-sh .getsalt-scripts.sh master
+sh prepare-sources.sh master
 
 cd 64 
 or 
