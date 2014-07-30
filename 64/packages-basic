@@ -375,3 +375,4 @@ dri3proto
 libevdev
 libxshmfence
 presentproto
+llvm
