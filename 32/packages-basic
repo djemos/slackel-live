@@ -167,6 +167,7 @@ makedepend
 mate-colors-icon-theme
 mate-dialogs
 mate-icon-theme
+mate-media
 mate-notification-daemon
 mesa
 mkcomposecache
