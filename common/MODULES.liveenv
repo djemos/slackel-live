@@ -4,8 +4,8 @@ ssh
 alias
 avahi
 gdm
-user-settings-openbox
-dmrc-openbox
+user-settings-fluxbox
+dmrc-fluxbox
 xscreensaver-disable
 salixlive-logo
 slackellive-installer
