@@ -16,7 +16,6 @@ cairo
 cifs-utils
 clearlooks-phenix
 compositeproto
-corbeille-spacefm-en
 cups
 damageproto
 dejavu-fonts-ttf
@@ -173,7 +172,6 @@ mesa
 mkcomposecache
 mkfontdir
 mkfontscale
-mountshare-spacefm
 mozilla-firefox
 mozilla-nss
 mtdev
@@ -216,13 +214,11 @@ sinhala_lklug-font-ttf
 slackel-openbox-artwork
 smproxy
 sourcery
-spacefm
 startup-notification
 svgalib
 system-config-printer
 t1lib
 tibmachuni-font-ttf
-trash
 ttf-indic-fonts
 udevil
 udisks
@@ -352,3 +348,10 @@ dri3proto
 libevdev
 libxshmfence
 presentproto
+libfm
+pcmanfm
+atkmm
+cairomm
+gtkmm
+pangomm
+menu-cache
