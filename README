@@ -28,6 +28,9 @@ git clone https://github.com/djemos/slackel-live.git
 or for KDE
 git clone https://github.com/djemos/slackel-live.git -b kde 
 
+or for fluxbox
+git clone https://github.com/djemos/slackel-live.git -b fluxbox 
+
 cd slackel-live
 sh prepare-sources.sh master
 
