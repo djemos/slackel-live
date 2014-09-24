@@ -1,7 +1,7 @@
 # vim: set syn=sh:
 if [ -z "$DISTRO" ]; then
   DISTRO=slackel
-  VER=openbox-6.0-64
+  VER=openbox-6.0
   # empty for a final release for example
   #RLZ=$(date -Iminutes)
   RLZ=
@@ -12,7 +12,7 @@ if [ -z "$DISTRO" ]; then
   FUFSVER=0.4.2
   FUFSURL=http://funionfs.apiou.org/file/funionfs-$FUFSVER.tar.gz
   # this is atuo-generated for convenience but you can provide another filename
-  ISO_NAME=${DISTRO}live-$VER${RLZ:+-$RLZ}.iso
+  ISO_NAME=${DISTRO}live64-$VER${RLZ:+-$RLZ}.iso
   # the package containing the live kernel. Normally you won't need to change this
   #KERNELPKGNAME=kernelive
   # unless you have a very good reason, use xz
