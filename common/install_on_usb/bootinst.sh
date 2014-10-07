@@ -90,6 +90,14 @@ cd "$BOOT"
 # find out device and mountpoint
 PART="$(df . | tail -n 1 | tr -s " " | cut -d " " -f 1)"
 DEV="$(echo "$PART" | sed -r "s:[0-9]+\$::" | sed -r "s:([0-9])[a-z]+\$:\\1:i")"   #"
+# Set LABEL on USB
+if blkid | grep -q "TYPE=\"vfat\""
+then
+mlabel -i $PART ::"LIVE"
+elif blkid | grep -q "TYPE=\"ext3\""
+then
+e2label $PART "LIVE"
+fi
 
 # check if disk is already bootable. Mostly for Windows discovery
 if [ "$(fdisk -l "$DEV" | fgrep "$DEV" | fgrep "*")" != "" ]; then
