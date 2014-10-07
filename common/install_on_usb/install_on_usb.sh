@@ -213,5 +213,13 @@ RES=$?
 if [ $RES -ne 0 ]; then
 exit $RES
 fi
+# Set LABEL on USB
+if blkid | grep -q "TYPE=\"vfat\""
+then
+mlabel -i $DEVPART ::LIVE
+elif blkid | grep -q "TYPE=\"ext3\""
+then
+e2label $DEVPART LIVE
+fi
 install_syslinux "$MNTDIR" $DEVROOT $DEVPART $PARTNUM "$BASEDIR"
 exit 0
