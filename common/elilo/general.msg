@@ -10,7 +10,7 @@
  7f³70            by pressing F2.                                                 ³10
  7f³70            You can pass additional kernel arguments using the              ³10
  7f³70            text box.                                                       ³10
- 7f³70            Press the <return> key to boot into Salix Live.                 ³10
+ 7f³70            Press the <return> key to boot into Slackel Live.                 ³10
  7f³70                                                                            ³10
  7f³70                                                                            ³10
  7f³70                                                                            ³10
