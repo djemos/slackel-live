@@ -85,8 +85,8 @@ fi
 function check_if_file_iso_exists(){
 isoname=$1
 if [ -f "$isoname" ]; then
-	isonamef="${isoname%%-*}"
-	isonamef="${isonamef##*/}"
+	isonamef="${isoname##*/}"
+	isonamef="${isonamef%%-*}"
 
 	if [ "$isonamef" == "slackellive64" ]; then
 		iso_arch=64
