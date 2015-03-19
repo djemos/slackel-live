@@ -1,25 +1,25 @@
- ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ğ Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü İ Ş ß 
+ Â° Â± Â² Â³ Â´ Âµ Â¶ Â· Â¸ Â¹ Âº Â» Â¼ Â½ Â¾ Â¿ Ã€ Ã Ã‚ Ãƒ Ã„ Ã… Ã† Ã‡ Ãˆ Ã‰ ÃŠ Ã‹ ÃŒ Ã Ã Ã Ã Ã‘ Ã’ Ã“ Ã” Ã• Ã– Ã— Ã˜ Ã™ Ãš Ã› Ãœ Ã Ã ÃŸ 
 10 
- 7fÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 74General Screen7f ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ70¿10
- 7f³70                                                                            ³10
- 7f³70           This is the general screen. You entered by pressing F1           ³10
- 7f³70                                                                            ³10
- 7f³70                   Press any key to return to main screen                   ³10
- 7f³70                                                                            ³10
- 7f³70            A list of suggested kernel arguments can be found               ³10
- 7f³70            by pressing F2.                                                 ³10
- 7f³70            You can pass additional kernel arguments using the              ³10
- 7f³70            text box.                                                       ³10
- 7f³70            Press the <return> key to boot into Slackel Live.                 ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70 Help: [71F170-General]  [71F270-Params]                                            ³10
- 7fÀ70ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ10
+ 7fÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â´ 74General Screen7f ÃƒÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„70Â¿10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70           This is the general screen. You entered by pressing F1           Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                   Press any key to return to main screen                   Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70            A list of suggested kernel arguments can be found               Â³10
+ 7fÂ³70            by pressing F2.                                                 Â³10
+ 7fÂ³70            You can pass additional kernel arguments using the              Â³10
+ 7fÂ³70            text box.                                                       Â³10
+ 7fÂ³70            Press the <return> key to boot into Slackel Live.               Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70 Help: [71F170-General]  [71F270-Params]                                            Â³10
+ 7fÃ€70Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™10
