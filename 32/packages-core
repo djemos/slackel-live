@@ -170,7 +170,6 @@ nettle
 network-scripts
 nfs-utils
 ntfs-3g
-ntp
 openldap-client
 openssh
 openssl

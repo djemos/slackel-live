@@ -8,6 +8,7 @@ bluez-firmware
 bluez-hcidump
 brasero
 claws-mail
+dconf
 depfinder
 djvulibre
 exaile
@@ -57,6 +58,7 @@ libevent
 libgphoto2
 libgpod
 libhangul
+libical
 libiodbc
 libmms
 libmtp
@@ -88,6 +90,7 @@ parcellite
 pidgin
 pil
 poppler-data
+pygobject3
 pyxdg
 rhino
 sakis3g
@@ -118,6 +121,3 @@ xcb-util-keysyms
 xdg-user-dirs
 xvidcore
 zd1211-firmware
-libical
-pygobject3
-dconf
