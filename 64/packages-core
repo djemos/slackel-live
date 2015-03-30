@@ -55,6 +55,7 @@ file
 findutils
 flex
 floppy
+freetype
 fuse
 gamin
 gawk
@@ -80,6 +81,8 @@ gpm
 gptfdisk
 grep
 groff
+grub
+grub-scripts
 guile
 gzip
 hdparm
@@ -124,6 +127,7 @@ libnl
 libnl3
 libogg
 libpcap
+libpng
 libpthread-stubs
 libraw1394
 libtasn1
@@ -253,7 +257,3 @@ xfsprogs
 xz
 zlib
 zoo
-freetype
-libpng
-grub
-grub-scripts
