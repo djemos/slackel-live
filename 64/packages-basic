@@ -182,6 +182,7 @@ makedepend
 mate-colors-icon-theme
 mate-dialogs
 mate-icon-theme
+mate-media
 mate-notification-daemon
 menu-cache
 mesa
@@ -368,7 +369,6 @@ xset
 xsetroot
 xsm
 xstdcmap
-xterm
 xtrans
 xvidtune
 xvinfo

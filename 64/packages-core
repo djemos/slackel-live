@@ -82,7 +82,6 @@ gptfdisk
 grep
 groff
 grub
-grub-scripts
 guile
 gzip
 hdparm

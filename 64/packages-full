@@ -34,10 +34,6 @@ gucharmap
 gutenprint
 gvfs
 hplip
-ibus
-ibus-hangul
-ibus-m17n
-ibus-pinyin
 icedtea-web
 ilmbase
 imagemagick
@@ -46,6 +42,7 @@ ipw2200-fw
 iso-codes
 iw
 libass
+libbluray
 libcaca
 libcdaudio
 libcuefile
@@ -71,11 +68,11 @@ libwmf
 lilosetup
 loudmouth
 lxrandr
-m17n-lib
 madplay
 mate-document-viewer
 mate-file-archiver
 mpg123
+mtpaint
 musepack-tools
 mutagen
 ndisgtk
