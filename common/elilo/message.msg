@@ -1,25 +1,25 @@
- ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ğ Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü İ Ş ß 
+ Â° Â± Â² Â³ Â´ Âµ Â¶ Â· Â¸ Â¹ Âº Â» Â¼ Â½ Â¾ Â¿ Ã€ Ã Ã‚ Ãƒ Ã„ Ã… Ã† Ã‡ Ãˆ Ã‰ ÃŠ Ã‹ ÃŒ Ã Ã Ã Ã Ã‘ Ã’ Ã“ Ã” Ã• Ã– Ã— Ã˜ Ã™ Ãš Ã› Ãœ Ã Ã ÃŸ 
 10 
- 7fÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 74Slackel Live          7f ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ70¿10
- 7f³70 Welcome to Slackel Live 14.1        Please select the language of your       ³10
- 7f³70 choice in the menu below. The menu can be navigated by using the up and    ³10
- 7f³70 down arrows keys on your keyboard.  You can pass additional kernel         ³10
- 7f³70 arguments using the text box below.  A list of suggested kernel arguments  ³10
- 7f³70 can be found by pressing F2. Once you have chosen your language and kernel ³10
- 7f³70 arguments, press the <return> key to boot into Slackel Live.  Enjoy!!        ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70            ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ7f¿70              ³10
- 7f³70            ³70          This is where the menu goes           7f³70             ³10
- 7f³70            ³701e            (active colour)                     7f³70              ³10
- 7f³70            ³70           (inactive colour)                    7f³70              ³10
- 7f³70            ³70                                                1e7f³70             ³10
- 7f³70            À7fÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ70              ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70                                                                            ³10
- 7f³70 Boot: 35                                                                  70   ³10
- 7f³70                                                                            ³10
- 7f³70 Help: [71F170-General]  [71F270-Params]                                            ³10
- 7fÀ70ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ10
+ 7fÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â´ 74Slackel Live          7f ÃƒÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„70Â¿10
+ 7fÂ³70 Welcome to Slackel Live             Please select the language of your       Â³10
+ 7fÂ³70 choice in the menu below. The menu can be navigated by using the up and    Â³10
+ 7fÂ³70 down arrows keys on your keyboard.  You can pass additional kernel         Â³10
+ 7fÂ³70 arguments using the text box below.  A list of suggested kernel arguments  Â³10
+ 7fÂ³70 can be found by pressing F2. Once you have chosen your language and kernel Â³10
+ 7fÂ³70 arguments, press the <return> key to boot into Slackel Live.  Enjoy!!        Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70            ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„7fÂ¿70              Â³10
+ 7fÂ³70            Â³70          This is where the menu goes           7fÂ³70             Â³10
+ 7fÂ³70            Â³701e            (active colour)                     7fÂ³70              Â³10
+ 7fÂ³70            Â³70           (inactive colour)                    7fÂ³70              Â³10
+ 7fÂ³70            Â³70                                                1e7fÂ³70             Â³10
+ 7fÂ³70            Ã€7fÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™70              Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70 Boot: 35                                                                  70   Â³10
+ 7fÂ³70                                                                            Â³10
+ 7fÂ³70 Help: [71F170-General]  [71F270-Params]                                            Â³10
+ 7fÃ€70Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™10
