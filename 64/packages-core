@@ -253,3 +253,7 @@ xfsprogs
 xz
 zlib
 zoo
+libevent
+grub
+libpng
+freetype

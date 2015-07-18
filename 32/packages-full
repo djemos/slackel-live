@@ -49,6 +49,7 @@ k3b
 kcalc
 kcharselect
 kcolorchooser
+kdeconnect-kde
 kdegraphics-strigi-analyzer
 kdegraphics-thumbnailers
 kde-l10n-el
@@ -64,7 +65,8 @@ kde-l10n-pl
 kde-l10n-pt
 kde-l10n-ja
 kde-l10n-ru
-kdenetwork
+kdenetwork-filesharing
+kdenetwork-strigi-analyzers
 kdepim
 kdepim-runtime
 kdf
@@ -76,7 +78,7 @@ ksaneplugin
 ksnapshot
 ktimer
 ktorrent
-kwallet
+kwalletmanager
 libass
 libcdaudio
 libcuefile
@@ -110,7 +112,6 @@ ndisgtk
 ndiswrapper
 okular
 openjre
-phonon-mplayer
 pil
 protobuf
 pygobject3
@@ -135,3 +136,13 @@ wireless-tools
 wpa_supplicant
 xvidcore
 zd1211-firmware
+gst-plugins-base0
+gstreamer0
+LibRaw
+libkscreen
+libechonest
+libmygpo-qt
+slang1
+wavpack
+libfakekey
+librevenge

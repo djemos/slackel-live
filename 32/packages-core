@@ -91,7 +91,6 @@ infozip
 inotify-tools
 iptables
 iputils
-isapnptools
 ispell
 jfsutils
 kbd
@@ -254,3 +253,8 @@ xfsprogs
 xz
 zlib
 zoo
+libevent
+grub
+libpng
+freetype
+isapnptools
