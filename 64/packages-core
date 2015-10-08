@@ -109,7 +109,7 @@ libcddb
 libcdio
 libcgroup
 libcroco
-libelf
+libevent
 libffi
 libgcrypt
 libgpg-error
@@ -129,6 +129,7 @@ libpcap
 libpng
 libpthread-stubs
 libraw1394
+libsigsegv
 libtasn1
 libtermcap
 libtool
@@ -194,7 +195,7 @@ popt
 portmap
 ppp
 procmail
-procps
+procps-ng
 pth
 python
 rcs

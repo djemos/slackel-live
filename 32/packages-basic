@@ -1,6 +1,7 @@
 ConsoleKit
 GConf
 aalib
+adwaita-icon-theme
 alsa-lib
 alsa-oss
 alsa-utils
@@ -19,9 +20,9 @@ cifs-utils
 clearlooks-phenix
 compositeproto
 conky
-corbeille-spacefm-en
 cups
 damageproto
+dconf
 dejavu-fonts-ttf
 desktop-file-utils
 dmxproto
@@ -58,6 +59,7 @@ fribidi
 fslsfonts
 fstobdf
 gccmakedep
+gcr
 gd
 gdk-pixbuf2
 gdm
@@ -77,9 +79,9 @@ gsettings-desktop-schemas
 gsimplecal
 gslapt
 gst-plugins-base
-gst-plugins-base1
+gst-plugins-base0
 gstreamer
-gstreamer1
+gstreamer0
 gtk+2
 gtk+3
 gtk-engines
@@ -96,6 +98,7 @@ imlib2
 inputproto
 intltool
 jasper
+json-c
 kbproto
 keyutils
 lcms
@@ -139,9 +142,11 @@ libatasmart
 libcanberra
 libdmx
 libdrm
+libepoxy
 liberation-fonts-ttf
 libevdev
 libexif
+libfm
 libfontenc
 libglade
 libgnome-keyring
@@ -149,11 +154,13 @@ libgnomecanvas
 libgsf
 libid3tag
 libidl
-libjpeg
+libimobiledevice
+libjpeg-turbo
 libmng
 libnotify
 liboil
 libpciaccess
+libplist
 libproxy
 librsvg
 libsamplerate
@@ -164,6 +171,7 @@ libsoup
 libtheora
 libtiff
 libunique
+libusbmuxd
 libvisual
 libwebp
 libwnck
@@ -190,7 +198,6 @@ midori
 mkcomposecache
 mkfontdir
 mkfontscale
-mountshare-spacefm
 mozilla-nss
 mtdev
 notify-python
@@ -201,9 +208,11 @@ obmenu
 obsidian-cursors
 openbox
 openbox-menu
+openjpeg
 orc
 pango
 pangomm
+pcmanfm
 pixman
 pnm2ppa
 polkit
@@ -241,7 +250,6 @@ sinhala_lklug-font-ttf
 slackel-openbox-artwork
 smproxy
 sourcery
-spacefm
 startup-notification
 svgalib
 system-config-printer
@@ -273,6 +281,9 @@ xbacklight
 xbitmaps
 xcb-proto
 xcb-util
+xcb-util-image
+xcb-util-keysyms
+xcb-util-wm
 xclipboard
 xcmiscproto
 xcmsdb
