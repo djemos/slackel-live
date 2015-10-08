@@ -1,4 +1,6 @@
 avahi
+efibootmgr
+elilo
 gparted
 isomaster
 libdaemon
