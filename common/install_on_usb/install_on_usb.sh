@@ -65,6 +65,20 @@ if [ `id -u` != "0" ]; then
 fi
 }
 
+
+function create_link_for_other_distros(){
+# if we run the script from other distro's e.g. ubuntu 
+# which have mbr.bin installed in /usr/lib/syslinux/ 
+# we need a symbolic to /usr/share/syslinux
+if [ ! -f /etc/slackware-version ]; then
+	if [ -f /usr/lib/syslinux/mbr.bin ]; then
+	 if [ ! -f /usr/share/syslinux/mbr.bin ]; then
+		sudo ln --symbolic /usr/lib/syslinux/mbr.bin  /usr/share/syslinux/mbr.bin
+	 fi
+	fi 
+fi
+}	
+
 function find_iso(){
 isoname=$1
 if [ -f "$isoname" ]
@@ -131,6 +145,10 @@ echo "										   "
 echo "Removable device is $installmedia        "
 echo "										   "
 echo "========================================="
+flag=*
+for n in $installmedia$flag ; do umount $n > /dev/null 2>&1; done
+#mount_point=`mount | grep $installmedia | cut -d : -f 1 -d " "` 
+#umount $mount_point > /dev/null 2>&1
 fi
 }
 
@@ -389,9 +407,12 @@ case $action in
 	fi	
     check_root
 if  check_if_file_iso_exists $isoname ; then
+	flag=*
+	for n in $installmedia$flag ; do umount $n > /dev/null 2>&1; done
 	check_device $installmedia
 	#find_usb
 	usb_message
+	create_link_for_other_distros
 	ISODIR=$(mktemp -d)
 	mount -o loop $isoname $ISODIR > /dev/null 2>&1
 	livedirectory=$ISODIR
@@ -421,6 +442,10 @@ if  check_if_file_iso_exists $isoname ; then
 		echo "`basename $0` --usb iso_name device"
 		exit $CMDERROR
 	fi
+		cd ~/
+		sleep 5
+		umount  /tmp/tmp.* > /dev/null 2>&1
+		rm -rf /tmp/tmp.*
 fi		
 ;;
 	

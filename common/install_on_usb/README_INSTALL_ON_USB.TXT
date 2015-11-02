@@ -12,6 +12,11 @@ and execute the script from there:
   sudo mount -o loop path_to_iso_image /tmp/iso
   cd /tmp/iso/boot
   sudo sh install_on_usb.sh --usb path_to_iso_image device
+  cd ~/
+  sudo umount /tmp/iso
+
+Note: If this script is executed from a different distro then be sure gdisk is installed and also maybe have to type
+		sudo bash install_on_usb.sh --usb path_to_iso_image device
 
 device can be something like /dev/sdb or /dev/sdc according to how
 many usb keys are plugged in your system.
