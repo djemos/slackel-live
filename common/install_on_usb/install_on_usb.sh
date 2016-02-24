@@ -293,7 +293,7 @@ if [ "$installdevice" == "$installmedia" ]; then #install on whole disk: partiti
 			fat32option="-F 32"
 			mkfs.vfat $fat32option -n "$LIVELABEL" $installmedia || return $FORMATERROR
 		else #BIOS/MBR
-			partitionnumber=4
+			partitionnumber=1
 			installmedia="$installdevice$partitionnumber"
 			if (( $mediasize < 2048 ))
 			then heads=128; sectors=32
@@ -302,7 +302,8 @@ if [ "$installdevice" == "$installmedia" ]; then #install on whole disk: partiti
 			mkdiskimage $installdevice 1 $heads $sectors || return $PARTITIONERROR
 			dd if=/dev/zero of=$installdevice bs=1 seek=446 count=64 >/dev/null 2>&1
 			#echo -e ',0\n,0\n,0\n,,83,*' | sfdisk $installdevice || return $PARTITIONERROR
-			echo -e ',0\n,0\n,0\n,,b,*' | sfdisk $installdevice || return $PARTITIONERROR
+			#echo -e ',0\n,0\n,0\n,,b,*' | sfdisk $installdevice || return $PARTITIONERROR
+			echo -e ',,b,*' | sfdisk $installdevice || return $PARTITIONERROR
 			partprobe $installdevice; sleep 3
 			#mkfs.ext3 -L "$LIVELABEL" $installmedia || return $FORMATERROR
 			fat32option="-F 32"
@@ -465,7 +466,7 @@ if  [ "$iso_arch" == "32" ] || [ "$iso_arch" == "64" ]; then
 			partitionnumber=1
 			installmedia="$installdevice$partitionnumber"
 	else #BIOS/MBR
-			partitionnumber=4
+			partitionnumber=1
 			installmedia="$installdevice$partitionnumber"
 	fi		
         echo $installmedia
