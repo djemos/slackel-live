@@ -1,6 +1,7 @@
 avahi
 efibootmgr
 elilo
+gnu-efi
 gparted
 isomaster
 libdaemon
