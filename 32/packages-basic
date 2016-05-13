@@ -1,8 +1,9 @@
-ConsoleKit
+ConsoleKit2
 GConf
 aalib
 alsa-lib
 alsa-oss
+alsa-plugins
 alsa-utils
 appres
 at-spi2-atk
@@ -15,11 +16,14 @@ bdftopcf
 bigreqsproto
 cairo
 cairomm
+cgmanager
 cifs-utils
 clearlooks-phenix
 compositeproto
 conky
 cups
+cups-filters
+cups-filters
 damageproto
 dconf
 dejavu-fonts-ttf
@@ -27,12 +31,14 @@ desktop-file-utils
 dmxproto
 dri2proto
 dri3proto
+elfutils
 enchant
 encodings
 esound
 evieext
 fbpanel
 fbxkb
+fftw
 fixesproto
 flac
 font-adobe-100dpi
@@ -52,8 +58,8 @@ fontcacheproto
 fontconfig
 fontsproto
 fonttosfnt
-foomatic-filters
 freeglut
+freetype
 fribidi
 fslsfonts
 fstobdf
@@ -84,7 +90,8 @@ gstreamer0
 gtk+2
 gtk+3
 gtk-engines
-gtkmm
+gtkmm2
+gtkmm3
 harfbuzz
 hicolor-icon-theme
 hunspell
@@ -97,6 +104,7 @@ imlib2
 inputproto
 intltool
 jasper
+js185
 json-c
 kbproto
 keyutils
@@ -137,8 +145,10 @@ libXxf86misc
 libXxf86vm
 libaio
 libart_lgpl
+libasyncns
 libatasmart
 libcanberra
+libcap-ng
 libdmx
 libdrm
 libepoxy
@@ -156,6 +166,7 @@ libidl
 libimobiledevice
 libjpeg-turbo
 libmng
+libnih
 libnotify
 liboil
 libpciaccess
@@ -181,6 +192,7 @@ libxklavier
 libxshmfence
 libxslt
 listres
+llvm
 luit
 lxappearance
 lxmenu-data
@@ -211,6 +223,7 @@ openjpeg
 orc
 pango
 pangomm
+pavucontrol
 pcmanfm
 pixman
 pnm2ppa
@@ -218,6 +231,7 @@ polkit
 poppler
 presentproto
 printproto
+pulseaudio
 pyalsaaudio
 pycairo
 pycups
@@ -226,6 +240,7 @@ pygobject
 pygtk
 pysimpleconfig
 pysmbc
+qpdf
 radeontool
 randrproto
 rarian
@@ -237,6 +252,7 @@ rgb
 salix-artwork
 salixtools-gtk
 samba
+sbc
 scrnsaverproto
 scrot
 sdl
@@ -249,6 +265,7 @@ sinhala_lklug-font-ttf
 slackel-openbox-artwork
 smproxy
 sourcery
+speexdsp
 startup-notification
 svgalib
 system-config-printer
@@ -282,6 +299,7 @@ xcb-proto
 xcb-util
 xcb-util-image
 xcb-util-keysyms
+xcb-util-renderutil
 xcb-util-wm
 xclipboard
 xcmiscproto
@@ -296,7 +314,6 @@ xdriinfo
 xev
 xextproto
 xf86-input-acecad
-xf86-input-aiptek
 xf86-input-evdev
 xf86-input-joystick
 xf86-input-keyboard
@@ -319,7 +336,6 @@ xf86-video-i740
 xf86-video-intel
 xf86-video-mach64
 xf86-video-mga
-xf86-video-modesetting
 xf86-video-neomagic
 xf86-video-nouveau
 xf86-video-nv
