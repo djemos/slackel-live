@@ -1,10 +1,11 @@
 avahi
-freerdp
+efibootmgr
+elilo
+gnu-efi
 gparted
 isomaster
 libdaemon
 libssh
-remmina
 slackware-live
 sli
 squashfs-tools
