@@ -275,7 +275,6 @@ openexr
 openjpeg
 orc
 oxygen-gtk2
-oxygen-gtk3
 oxygen-icons
 pango
 pangomm
@@ -329,7 +328,6 @@ sessreg
 setxkbmap
 shared-mime-info
 showfont
-simple-icon-theme
 sinhala_lklug-font-ttf
 slackel-kde-artwork
 slackel-kdm-theme
