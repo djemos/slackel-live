@@ -1,14 +1,17 @@
-a2ps
 aaa_base
 aaa_terminfo
 acl
+attr
+coreutils
+etc
+glibc-zoneinfo
+a2ps
 acpid
 apr
 apr-util
 aspell
 aspell-en
 at
-attr
 autoconf
 autofs
 automake
@@ -23,7 +26,6 @@ ccache
 cdparanoia
 cdrdao
 cdrtools
-coreutils
 cpio
 cryptsetup
 curl
@@ -47,7 +49,6 @@ dvd+rw-tools
 e2fsprogs
 eject
 enscript
-etc
 ethtool
 eudev
 expat
@@ -72,7 +73,6 @@ git
 glib2
 glibc
 glibc-i18n
-glibc-zoneinfo
 gmm
 gmp
 gnupg
@@ -212,6 +212,7 @@ python
 rcs
 readline
 reiserfsprogs
+rfkill
 rp-pppoe
 rpcbind
 rsync
