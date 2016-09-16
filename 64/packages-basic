@@ -23,7 +23,6 @@ compositeproto
 conky
 cups
 cups-filters
-cups-filters
 damageproto
 dconf
 dejavu-fonts-ttf
@@ -89,6 +88,7 @@ gstreamer0
 gtk+2
 gtk+3
 gtk-engines
+gtkman
 gtkmm2
 gtkmm3
 harfbuzz
@@ -97,11 +97,11 @@ hunspell
 iceauth
 ico
 icon-naming-utils
-icu4c
 imake
 imlib2
 inputproto
 intltool
+iw
 jasper
 js185
 json-c
@@ -170,7 +170,6 @@ libnotify
 liboil
 libpciaccess
 libplist
-libproxy
 librsvg
 libsamplerate
 libsecret
@@ -277,6 +276,7 @@ udisks
 udisks2
 unico
 upower
+urwid
 util-macros
 vanilla-dmz-cursors
 vbetool
@@ -286,8 +286,11 @@ volumeicon
 vte
 vte3
 webkitgtk
+wicd
+wireless-tools
 wm-logout
 wmctrl
+wpa_supplicant
 wqy-zenhei-font-ttf
 x11-skel
 x11perf
@@ -400,3 +403,10 @@ xvinfo
 xwd
 xwininfo
 xwud
+gvfs
+pyxdg
+libcdio-paranoia
+libgphoto2
+libmtp
+lua
+tolua++
