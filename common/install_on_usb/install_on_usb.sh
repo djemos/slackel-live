@@ -1,8 +1,8 @@
 #!/bin/bash
 # Gettext internationalization
-#
+
 #"BASED ON CODE OF BUILD_SLACKWARE-LIVE.SH FROM linux-nomad"
-AUTHOR='Dimitris Tzemos - djemos@slackel.gr '
+AUTHOR='Dimitris Tzemos - dijemos@gmail.com'
 LICENCE='GPL v3+'
 SCRIPT=$(basename "$0")
 SCRIPT=$(readlink -f "$SCRIPT")
@@ -53,7 +53,7 @@ INSUFFICIENTSPACE=5
 persistent_file=""
 SCRIPT_NAME="$(basename $0)"
 NAME="persistent"
-SVER=14.1
+SVER=14.2
 
 function check_root(){
 # make sure I am root
@@ -74,7 +74,13 @@ if [ ! -f /etc/slackware-version ]; then
 	if [ -f /usr/lib/syslinux/mbr.bin ]; then
 	 if [ ! -f /usr/share/syslinux/mbr.bin ]; then
 		sudo ln --symbolic /usr/lib/syslinux/mbr.bin  /usr/share/syslinux/mbr.bin
-	 fi
+	 fi 
+	fi
+	
+	if [ -f /usr/lib/syslinux/gptmbr.bin ]; then
+	 if [ ! -f /usr/share/syslinux/gptmbr.bin ]; then
+		sudo ln --symbolic /usr/lib/syslinux/gptmbr.bin  /usr/share/syslinux/gptmbr.bin
+	 fi 
 	fi 
 fi
 }	
@@ -197,7 +203,7 @@ function persistent_message(){
 MSG="Do you want to create a persistent file on your drive $installmedia ?\n\
 \n\
 "
-
+	
 dialog --title "Create a Persistent file" \
 	--defaultno \
 	--yesno "$MSG" 0 0
@@ -233,6 +239,56 @@ else
 fi
 }
     
+function persistent_message_ext3(){
+MSG="Do you want to create a persistent file on your drive $installmedia ?\n\
+\n\
+"
+	
+dialog --title "Create a Persistent file" \
+	--defaultno \
+	--yesno "$MSG" 0 0
+retval=$?
+if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
+	persistent_file="no"
+else	
+    persistent_file="yes"
+    
+    answer="$(eval dialog --title \"Select size in MB\" \
+	--stdout \
+	--menu \"Select the size of persistent file:\" \
+	0 0 0 \
+	'100' 'o' \
+	'300' 'o' \
+	'400' 'o' \
+	'500' 'o' \
+	'700' 'o' \
+	'800' 'o' \
+	'1000' 'o' \
+	'1500' 'o' \
+	'2000' 'o' \
+	'2500' 'o' \
+	'3000' 'o' \
+	'3500' 'o' \
+	'3998' 'o'	\
+	'5120' 'o' \
+	'6144' 'o' \
+	'7168' 'o' \
+	'8192' 'o' \
+	'9216' 'o' \
+	'10240' 'o' \
+	'11264' 'o' \
+	'12288' 'o' \
+	'13312' 'o' \
+	'14336' 'o')"
+	retval=$?
+	if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
+		persistent_file="no"
+	else
+		SIZE=$answer
+	fi  
+fi
+}
+
 function create_persistent(){
 CWD=`pwd`
 mkdir -p /mnt/install
@@ -241,10 +297,15 @@ cd /mnt/install/
 FREE=$('df' -k .|tail -n1|awk '{print $4}')
 AFTER=$(( $FREE - 1024 * $SIZE ))
 if [ $AFTER -gt 0 ]; then
+	echo ""
 	echo "Creating persistent file 'persistent'. Please wait ..."
 	echo ""
-	dd if=/dev/zero of="$NAME" bs=1M count=$SIZE
-	mkfs.ext3 -F -m 0 -L "persistent" "$NAME" && CHECK='OK'
+		if [ "$LIVEFSTYPE" == "fixed" ]; then
+			dd if=/dev/zero of="$NAME" bs=1M count=$SIZE
+		else	
+			dd if=/dev/zero of="$NAME" bs=1M count=0 seek=$SIZE
+		fi
+		mkfs.ext3 -F -m 0 -L "persistent" "$NAME" && CHECK='OK'
 	if [ -n "$CHECK" ]; then
 		echo ""
 		echo "The persistent file $NAME is ready."
@@ -270,6 +331,45 @@ for creating the persistent file $NAME"
   exit 1
 fi
 }
+
+function filesystem_message(){   
+    answer="$(eval dialog --title \"Select filesystem\" \
+	--stdout \
+	--menu \"Select the filesystem for formatting the usb:\" \
+	0 0 0 \
+	'vfat' 'o' \
+	'ext3' 'o')"
+	retval=$?
+	if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
+		exit 0
+	else
+		if [ "$answer" == "vfat" ]; then		
+			LIVEFS="vfat"
+		else
+			LIVEFS="ext3"
+		fi  
+	fi
+}
+
+function persistent_file_type(){   
+    answer="$(eval dialog --title \"Select persistent file Type\" \
+	--stdout \
+	--menu \"Select the persistent file type \\n sparse [grow dynamically]  or \\n fixed [allocated space]:\" \
+	0 0 0 \
+	'fixed' 'o' \
+	'sparse' 'o')"
+	retval=$?
+	if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
+		exit 0
+	else
+		if [ "$answer" == "fixed" ]; then		
+			LIVEFSTYPE="fixed"
+		else
+			LIVEFSTYPE="sparse"
+		fi  
+	fi
+}
+
     
 function install_usb() {
 	device=`echo $installmedia | cut -c6-8`
@@ -280,18 +380,35 @@ function install_usb() {
 if [ "$installdevice" == "$installmedia" ]; then #install on whole disk: partition and format media
 		#if [ `uname -m` == "x86_64" ] && [ "$iso_arch" == "64" ]; then #EFI/GPT
 		if [ "$iso_arch" == "64" ]; then #EFI/GPT
-			partitionnumber=1
-			installmedia="$installdevice$partitionnumber"
 			dd if=/dev/zero of=$installdevice bs=512 count=34 >/dev/null 2>&1
-			#echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n0700\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
-			echo -e "2\nn\n\n\n\n0700\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
-			#hybrid MBR with BIOS boot partition (1007K) EFI partition (32M) and live partition
-			#echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n0700\nn\n128\n\n\nef02\nr\nh\n1 2\nn\n\ny\n\nn\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
-			partprobe $installdevice >/dev/null 2>&1; sleep 3
-		#	mkfs.fat -n "efi"  $installdevice"1" || return $FORMATERROR
-			#mkfs.ext3 -L "$LIVELABEL" $installmedia || return $FORMATERROR
-			fat32option="-F 32"
-			mkfs.vfat $fat32option -n "$LIVELABEL" $installmedia || return $FORMATERROR
+			if [ "$LIVEFS" == "vfat" ]; then
+				partitionnumber=1
+				installmedia="$installdevice$partitionnumber"
+				echo -e "2\nn\n\n\n\n0700\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
+				#echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n0700\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
+				#hybrid MBR with BIOS boot partition (1007K) EFI partition (32M) and live partition
+				#echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n0700\nn\n128\n\n\nef02\nr\nh\n1 2\nn\n\ny\n\nn\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
+				partprobe $installdevice >/dev/null 2>&1; sleep 3
+				fat32option="-F 32"
+				mkfs.vfat $fat32option -n "$LIVELABEL" $installmedia || return $FORMATERROR
+				sleep 3
+			else
+				efipartition="$installdevice""1"
+				installmedia="$installdevice""2"
+				#hybrid MBR with BIOS boot partition (1007K) EFI partition (32M) and live partition
+				echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
+				#echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n\nn\n128\n\n\nef02\nr\nh\n1 2\nn\n\ny\n\nn\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
+				# set the linux partition bootable
+				sgdisk -p -A 2:set:2 $installdevice
+				# confirm it was indeed set correctly
+				sgdisk -p -A 2:show $installdevice
+				partprobe $installdevice; sleep 3
+				echo "*** Formating EFI partition $efipartition ..."
+				mkfs.vfat -n "EFI" $efipartition || return $FORMATERROR
+				echo "*** Formating system partition $installmedia ..."
+				mkfs.ext3 -F -L "$LIVELABEL" $installmedia || return $FORMATERROR
+				sleep 3
+			fi
 		else #BIOS/MBR
 			partitionnumber=1
 			installmedia="$installdevice$partitionnumber"
@@ -301,16 +418,21 @@ if [ "$installdevice" == "$installmedia" ]; then #install on whole disk: partiti
 			fi
 			mkdiskimage $installdevice 1 $heads $sectors || return $PARTITIONERROR
 			dd if=/dev/zero of=$installdevice bs=1 seek=446 count=64 >/dev/null 2>&1
-			#echo -e ',0\n,0\n,0\n,,83,*' | sfdisk $installdevice || return $PARTITIONERROR
-			#echo -e ',0\n,0\n,0\n,,b,*' | sfdisk $installdevice || return $PARTITIONERROR
-			echo -e ',,b,*' | sfdisk $installdevice || return $PARTITIONERROR
-			partprobe $installdevice; sleep 3
-			#mkfs.ext3 -L "$LIVELABEL" $installmedia || return $FORMATERROR
-			fat32option="-F 32"
-			mkfs.vfat $fat32option -n "$LIVELABEL" $installmedia || return $FORMATERROR
+			if [ "$LIVEFS" = "vfat" ]; then
+				#echo -e ',0\n,0\n,0\n,,83,*' | sfdisk $installdevice || return $PARTITIONERROR
+				#echo -e ',0\n,0\n,0\n,,b,*' | sfdisk $installdevice || return $PARTITIONERROR
+				echo -e ',,b,*' | sfdisk $installdevice || return $PARTITIONERROR
+				partprobe $installdevice; sleep 3
+				fat32option="-F 32"
+				mkfs.vfat $fat32option -n "$LIVELABEL" $installmedia || return $FORMATERROR
+			else
+				echo -e ',,83,*' | sfdisk $installdevice || return $PARTITIONERROR
+				partprobe $installdevice; sleep 3
+				mkfs.ext3 -L "$LIVELABEL" $installmedia || return $FORMATERROR
+			fi
+			sleep 3
 		fi
-		sleep 3
-	
+
 else #install on partition: filesystem check and format if needed
 		partitionnumber=`echo $installmedia | cut -c9-`
 		mkdir -p /mnt/tmp
@@ -319,7 +441,7 @@ else #install on partition: filesystem check and format if needed
 			umount /mnt/tmp
 			fsck -fy $installmedia >/dev/null 2>&1
 		else #format partition
-			if fdisk -l $installdevice 2>/dev/null | grep -q GPT; then
+			if fdisk -l $installdevice 2>/dev/null | grep -q 'GPT\|gpt'; then
 				partitiontype=`gdisk -l $installdevice | grep "^  *$partitionnumber " | sed 's/  */:/g' | cut -f7 -d:`
 			else
 				partitiontype=`fdisk -l $installdevice 2>/dev/null | grep "^$installmedia " | sed -e 's/\*//' -e 's/  */:/g' | cut -f5 -d:`
@@ -372,21 +494,45 @@ echo ""
 	cp -r $livedirectory/boot /mnt/install/
 	#if [ `uname -m` == "x86_64" ] && [ "$iso_arch" == "64" ]; then #EFI/GPT
 	if  [ "$iso_arch" == "64" ]; then #EFI/GPT
-		cp -r $livedirectory/EFI /mnt/install/
-		cp $livedirectory/efi.img /mnt/install/
+	    if [ "$LIVEFS" = "vfat" ]; then
+			cp -r $livedirectory/EFI /mnt/install/
+			cp $livedirectory/efi.img /mnt/install/
+		else
+			echo "*** Installing EFI on $efipartition ..."
+			mkdir -p /mnt/efi
+			mount $efipartition /mnt/efi; sleep 1
+			cp -r $livedirectory/EFI /mnt/efi/
+			cp $livedirectory/efi.img /mnt/efi
+			umount /mnt/efi
+			rmdir /mnt/efi
+		fi
 	fi
 	if fdisk -l $installdevice 2>/dev/null | grep -q "^$installmedia "; then #legacy / CSM (Compatibility Support Module) boot, if $installmedia present in MBR (or hybrid MBR)
 		sfdisk --force $installdevice -A $partitionnumber 2>/dev/null
 		if mount | grep -q "^$installmedia .* vfat "; then #FAT32
 			umount /mnt/install
+			# Use syslinux to make the USB device bootable:
+			echo "--- Making the USB drive '$installdevice' bootable using syslinux..."
 			syslinux -d /boot/syslinux $installmedia || return $BOOTERROR
-		else #Ext3 
+			cat /usr/share/syslinux/mbr.bin > $installdevice
+		else #ext3
+			#mv /mnt/install/boot/syslinux /mnt/install/boot/extlinux
+			#mv /mnt/install/boot/extlinux/syslinux.cfg /mnt/install/boot/extlinux/extlinux.conf
+			#rm -f /mnt/install/boot/extlinux/isolinux.*
+			#rm -f /mnt/install/boot/extlinux/boot.catalog
+			#/sbin/extlinux --install /mnt/install/boot/extlinux
+			# Use extlinux to make the USB device bootable:
+			echo "--- Making the USB drive '$installdevice' bootable using extlinux..."
 			extlinux -i /mnt/install/boot/syslinux || return $BOOTERROR
 			umount /mnt/install
+			if fdisk -l $installdevice 2>/dev/null | grep -q 'GPT\|gpt'; then
+				cat /usr/share/syslinux/gptmbr.bin > $installdevice
+			else
+				cat /usr/share/syslinux/mbr.bin > $installdevice
+			fi
 		fi
-		cat /usr/share/syslinux/mbr.bin > $installdevice
 	else
-		umount /mnt/install 
+		umount /mnt/install
 	fi
 	umount /mnt/install 2>/dev/null
 	sleep 2
@@ -430,7 +576,14 @@ if  check_if_file_iso_exists $isoname ; then
 			rmdir $ISODIR
 			exit $INSUFFICIENTSPACE
 		else
-			persistent_message
+			filesystem_message
+			if [ "$LIVEFS" == "vfat" ]; then
+				persistent_file_type
+				persistent_message
+			else
+				persistent_file_type
+				persistent_message_ext3
+			fi
 			install_usb $livedirectory $installmedia
 			if [ "$persistent_file" == "yes" ]; then
 			 create_persistent
@@ -449,7 +602,7 @@ if  check_if_file_iso_exists $isoname ; then
 		rm -rf /tmp/tmp.*
 fi		
 ;;
-	
+
 "--persistent")
 	iso_arch=$2
 	installmedia=$3
@@ -463,14 +616,36 @@ if  [ "$iso_arch" == "32" ] || [ "$iso_arch" == "64" ]; then
 	installdevice="/dev/$device"
 	#if [ `uname -m` == "x86_64" ] && [ "$iso_arch" == "64" ]; then #EFI/GPT
 	if [ "$iso_arch" == "64" ]; then #EFI/GPT
+		if mount $installdevice"2" /mnt/tmp >/dev/null 2>&1; then
+		    sleep 1
+		    umount /mnt/tmp
+		    partitionnumber=2
+			installmedia="$installdevice$partitionnumber"
+			persistent_file_type
+			echo $installmedia
+			persistent_message_ext3
+		else	
 			partitionnumber=1
 			installmedia="$installdevice$partitionnumber"
+			persistent_file_type
+			echo $installmedia			
+			persistent_message
+		fi
 	else #BIOS/MBR
 			partitionnumber=1
 			installmedia="$installdevice$partitionnumber"
+		if mount $installmedia /mnt/tmp >/dev/null 2>&1; then
+			persistent_file_type
+			echo $installmedia
+			if mount | grep -q "^$installmedia .* vfat "; then
+			    persistent_message
+			else		
+				persistent_message_ext3
+			fi
+			sleep 1
+			umount /mnt/tmp	
+		fi	
 	fi		
-        echo $installmedia
-		persistent_message
 		if [ "$persistent_file" == "yes" ]; then
 			 create_persistent
 		fi 
