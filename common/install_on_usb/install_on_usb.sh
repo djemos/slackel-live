@@ -395,8 +395,8 @@ if [ "$installdevice" == "$installmedia" ]; then #install on whole disk: partiti
 			else
 				efipartition="$installdevice""1"
 				installmedia="$installdevice""2"
-				#hybrid MBR with BIOS boot partition (1007K) EFI partition (32M) and live partition
-				echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
+				#hybrid MBR with BIOS boot partition (1007K) EFI partition (300M) and live partition
+				echo -e "2\nn\n\n\n+300M\nef00\nn\n\n\n\n\nr\nh\n1 2\nn\n\ny\n\nn\n\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
 				#echo -e "2\nn\n\n\n+32M\nef00\nn\n\n\n\n\nn\n128\n\n\nef02\nr\nh\n1 2\nn\n\ny\n\nn\nn\nwq\ny\n" | gdisk $installdevice || return $PARTITIONERROR
 				# set the linux partition bootable
 				sgdisk -p -A 2:set:2 $installdevice
