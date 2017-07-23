@@ -9,8 +9,8 @@ if [ -z "$DISTRO" ]; then
   #BGIMAGE_NAME=slackel.xcf
   #THEME=Tentacles
   # don't change this unless you sure that the newer version works the same
-  FUFSVER=0.4.2
-  FUFSURL=http://funionfs.apiou.org/file/funionfs-$FUFSVER.tar.gz
+  #FUFSVER=0.4.2
+  #FUFSURL=http://funionfs.apiou.org/file/funionfs-$FUFSVER.tar.gz
   # this is atuo-generated for convenience but you can provide another filename
   ISO_NAME=${DISTRO}live64-$VER${RLZ:+-$RLZ}.iso
   # the package containing the live kernel. Normally you won't need to change this
@@ -23,8 +23,8 @@ if [ -z "$DISTRO" ]; then
   export RLZ
   #export BGIMAGE_NAME
   #export THEME
-  export FUFSVER
-  export FUFSURL
+  #export FUFSVER
+  #export FUFSURL
   export ISO_NAME
   #export KERNELPKGNAME
   export COMP
