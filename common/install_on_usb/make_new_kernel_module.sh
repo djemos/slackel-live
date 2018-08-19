@@ -135,8 +135,8 @@ cp -R $modules/* $usb_path
 #cp modules/boot/modules/05-kernel.slm /run/media/djemos/LIVE/boot/modules/05-kernel.slm
 
 #dialog --title "Delete $rootdirectory and $modules directories ?" \
-	--defaultno \
-	--yesno "$MSG" 0 0
+#	--defaultno \
+#	--yesno "$MSG" 0 0
 #retval=$?
 #if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
 #	exit 0
