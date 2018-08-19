@@ -54,9 +54,6 @@ if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
 	exit 0
 fi
 
-# create packages_dir directory and copy all txz files there
-# create list file with the names of packages in packages_dir
-
 # live where packages will install, modules where modules will created, packages_dir contain packages.txz, list files with packages file names
 packagesdirectory=$startdir/packages_dir
 rootdirectory=$startdir/live
