@@ -50,10 +50,9 @@ dialog --title "Be sure for USB mount point" \
 	--yesno "$MSGSTR" 0 0
 retval=$?
 if [ $retval -eq 1 ] || [ $retval -eq 255 ]; then
-	clear
 	exit 0
 fi
-
+clear
 # live where packages will install, modules where modules will created, packages_dir contain packages.txz, list files with packages file names
 packagesdirectory=$startdir/packages_dir
 rootdirectory=$startdir/live
