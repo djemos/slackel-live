@@ -28,7 +28,7 @@ AUTHOR='Dimitris Tzemos - dijemos@gmail.com'
 LICENCE='GPL v3+'
 SCRIPT=$(basename "$0")
 SCRIPT=$(readlink -f "$SCRIPT")
-VER=1.0
+VER=2.0
 
 version() {
   echo "Slackel USB installer and persistent creator for 32 and EFI/UEFI 64 v$VER"
@@ -89,23 +89,15 @@ if [ `id -u` != "0" ]; then
 fi
 }
 
-
-function create_link_for_other_distros(){
-# if we run the script from other distro's e.g. ubuntu 
-# which have mbr.bin installed in /usr/lib/syslinux/ 
-# we need a symbolic to /usr/share/syslinux
-if [ ! -f /etc/slackware-version ]; then
-	if [ -f /usr/lib/syslinux/mbr.bin ]; then
-	 if [ ! -f /usr/share/syslinux/mbr.bin ]; then
-		sudo ln --symbolic /usr/lib/syslinux/mbr.bin  /usr/share/syslinux/mbr.bin
-	 fi 
-	fi
-	
-	if [ -f /usr/lib/syslinux/gptmbr.bin ]; then
-	 if [ ! -f /usr/share/syslinux/gptmbr.bin ]; then
-		sudo ln --symbolic /usr/lib/syslinux/gptmbr.bin  /usr/share/syslinux/gptmbr.bin
-	 fi 
-	fi 
+function find_syslinux(){
+# we need the path to syslinux files to be able to use the script 
+# from other distro's e.g. ubuntu
+if [ -d /usr/share/syslinux ]; then
+  PATH_TO_SYSLINUX="/usr/share/syslinux"
+elif [ -d /usr/lib/SYSLINUX ]; then
+  PATH_TO_SYSLINUX="/usr/lib/SYSLINUX"
+elif [ -d /usr/lib/syslinux ]; then
+  PATH_TO_SYSLINUX="/usr/lib/syslinux/mbr"
 fi
 }	
 
@@ -601,7 +593,7 @@ echo ""
 			# Use syslinux to make the USB device bootable:
 			echo "--- Making the USB drive '$installdevice' bootable using syslinux..."
 			syslinux -d /boot/syslinux $installmedia || return $BOOTERROR
-			cat /usr/share/syslinux/mbr.bin > $installdevice
+			cat ${PATH_TO_SYSLINUX}/mbr.bin > $installdevice
 		else #ext3
 			#mv /mnt/install/boot/syslinux /mnt/install/boot/extlinux
 			#mv /mnt/install/boot/extlinux/syslinux.cfg /mnt/install/boot/extlinux/extlinux.conf
@@ -613,9 +605,9 @@ echo ""
 			extlinux -i /mnt/install/boot/syslinux || return $BOOTERROR
 			umount /mnt/install
 			if fdisk -l $installdevice 2>/dev/null | grep -q 'GPT\|gpt'; then
-				cat /usr/share/syslinux/gptmbr.bin > $installdevice
+				cat ${PATH_TO_SYSLINUX}/gptmbr.bin > $installdevice
 			else
-				cat /usr/share/syslinux/mbr.bin > $installdevice
+				cat ${PATH_TO_SYSLINUX}/mbr.bin > $installdevice
 			fi
 		fi
 	else
@@ -646,7 +638,7 @@ if  check_if_file_iso_exists $isoname ; then
 	check_device $installmedia
 	#find_usb
 	usb_message
-	create_link_for_other_distros
+	find_syslinux
 	ISODIR=$(mktemp -d)
 	LODEVISO=$(losetup -f)
 	losetup $LODEVISO $isoname
