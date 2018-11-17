@@ -97,7 +97,10 @@ if [ -d /usr/share/syslinux ]; then
 elif [ -d /usr/lib/SYSLINUX ]; then
   PATH_TO_SYSLINUX="/usr/lib/SYSLINUX"
 elif [ -d /usr/lib/syslinux ]; then
-  PATH_TO_SYSLINUX="/usr/lib/syslinux/mbr"
+    if [ -f /usr/lib/syslinux/mbr.bin ]; then
+		PATH_TO_SYSLINUX="/usr/lib/syslinux"
+	elif [ -f /usr/lib/syslinux/mbr/mbr.bin ]; then
+		PATH_TO_SYSLINUX="/usr/lib/syslinux/mbr"
 fi
 }	
 
