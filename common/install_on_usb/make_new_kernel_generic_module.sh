@@ -132,6 +132,8 @@ echo
 echo "==================================="
 echo "copy $modules to $usb_path"
 cp -R $modules/* $usb_path
+cp $rootdirectory/boot/vmlinuz $usb_path/boot/
+cp $rootdirectory/boot/vmlinuz $usb_path/EFI/BOOT/
 
 #cp modules/boot/modules/05-kernel.slm /run/media/djemos/LIVE/boot/modules/05-kernel.slm
 
