@@ -39,7 +39,8 @@ if [ "$UID" != "0" ]; then
 	exit 1
 fi
 
-moduleslist="squashfs:overlay:loop:usb-storage:xhci-hcd:xhci-pci:ohci-pci:ehci-pci:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:crc32c-intel:ext3:ext4:isofs:fat:nls_cp437:nls_iso8859-1:msdos:vfat"
+#moduleslist="squashfs:overlay:loop:usb-storage:xhci-hcd:xhci-pci:ohci-pci:ehci-pci:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:crc32c-intel:ext3:ext4:isofs:fat:nls_cp437:nls_iso8859-1:msdos:vfat"
+moduleslist="squashfs:overlay:loop:xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:mmc-core:mmc-block:sdhci:sdhci-pci:sdhci-acpi:usb-storage:hid:usbhid:i2c-hid:hid-generic:hid-apple:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:crc32c-intel:ext3:ext4:isofs:fat:nls_cp437:nls_iso8859-1:msdos:vfat:ntfs"
 
 usb_path=`df --output=target | grep LIVE`
 
