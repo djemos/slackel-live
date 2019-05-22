@@ -21,7 +21,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# script to create kernel module package and initrd when kernel upgrade and copy to live usb
+# script to create generic kernel module package and initrd when generic kernel upgrade and copy to live usb
 
 AUTHOR='Dimitris Tzemos - dijemos@gmail.com'
 LICENCE='GPL v3+'
