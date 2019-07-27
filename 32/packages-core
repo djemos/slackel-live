@@ -1,3 +1,4 @@
+aaa_elflibs
 aaa_base
 aaa_terminfo
 acl
@@ -47,7 +48,7 @@ dosfstools
 dotnew
 dvd+rw-tools
 e2fsprogs
-eject
+efivar
 enscript
 ethtool
 eudev
@@ -98,7 +99,6 @@ infozip
 inotify-tools
 iptables
 iputils
-isapnptools
 ispell
 jfsutils
 kbd
@@ -140,7 +140,6 @@ libraw1394
 libsigsegv
 libssh2
 libtasn1
-libtermcap
 libtirpc
 libtool
 libunistring
@@ -160,7 +159,6 @@ lvm2
 lzo
 m4
 make
-man
 man-pages
 mc
 mdadm
@@ -207,12 +205,11 @@ popt
 ppp
 procmail
 procps-ng
-pth
+npth
 python
 rcs
 readline
 reiserfsprogs
-rfkill
 rp-pppoe
 rpcbind
 rsync
@@ -230,7 +227,7 @@ slang
 slapt-get
 slapt-src
 slkbuild
-slocate
+mlocate
 smartmontools
 spi
 spkg
@@ -269,3 +266,15 @@ xfsprogs
 xz
 zlib
 zoo
+libcap-ng
+hostname
+iproute2
+libidn2
+nghttp2
+openssl10
+openssl10-solibs
+libedit
+haveged
+openssl-solibs
+libpsl
+isapnptools
