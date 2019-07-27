@@ -99,9 +99,9 @@ elif [ -d /usr/lib/SYSLINUX ]; then
 elif [ -d /usr/lib/syslinux ]; then
     if [ -f /usr/lib/syslinux/mbr.bin ]; then
 		PATH_TO_SYSLINUX="/usr/lib/syslinux"
-    elif [ -f /usr/lib/syslinux/mbr/mbr.bin ]; then
+	elif [ -f /usr/lib/syslinux/mbr/mbr.bin ]; then
 		PATH_TO_SYSLINUX="/usr/lib/syslinux/mbr"
-    fi		
+	fi	
 fi
 }	
 
