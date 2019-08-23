@@ -26,7 +26,6 @@ gst-plugins-good0
 gst0-python
 gtk+ 
 gtkspell
-gucharmap
 gutenprint
 hplip
 icedtea-web
@@ -59,8 +58,13 @@ lilosetup
 loudmouth
 lxrandr
 madplay
-mate-document-viewer
-mate-file-archiver
+libgxps
+atril
+engrampa
+mate-power-manager
+mate-sensors-applet
+mate-system-monitor
+mate-utils
 mpg123
 mtpaint
 musepack-tools
