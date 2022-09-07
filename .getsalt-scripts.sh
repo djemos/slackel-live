@@ -9,7 +9,7 @@ if [ -z "$SALT_SCRIPTS_VER" ]; then
   echo "You need to specify a branch or tag for SaLT-scripts" >&2
   exit 1
 fi
-SALT_SCRIPTS_URL='git://github.com/djemos/SaLT-scripts-slackware.git'
+SALT_SCRIPTS_URL='https://github.com/djemos/SaLT-scripts-slackware.git'
 
 if [ -d salt-scripts ]; then
   rm -rf salt-scripts || echo "salt-scripts directory cannot be removed, check permissions" >&2
