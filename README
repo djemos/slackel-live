@@ -40,10 +40,10 @@ cd 32
 to build a 64 or 32 bit iso.
 You have to be on an 32 or 64 bit slackel system, to build the 32 or 64 bit iso.
 
-sudo getpkgs.sh 32 |64 version e.g. 64 14.1 
+sudo getpkgs.sh 32 |64 version e.g. 64 15.0
 or 
 su
-./getpkgs.sh 32 |64 version e.g. 64 14.1 
+./getpkgs.sh 32 |64 version e.g. 64 15.0 
 
 to build the iso
 sudo build-iso.sh
