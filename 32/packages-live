@@ -1,4 +1,3 @@
-avahi
 gparted
 instonusb
 multibootusb
@@ -8,4 +7,13 @@ slackware-live
 sli
 squashfs-tools
 syslinux
+xorg-intel-settings
+qcontrolcenter
+slackel-control-center
+rpm
+appstream-glib
+libostree
+flatpak
+flatpak-tools
+bubblewrap
 liveenv
