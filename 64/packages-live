@@ -1,10 +1,8 @@
-avahi
 efibootmgr
 elilo
 instonusb
 multibootusb
 gnu-efi
-guefi
 gparted
 isomaster
 libdaemon
@@ -12,4 +10,13 @@ slackware-live
 sli
 squashfs-tools
 syslinux
+qcontrolcenter
+slackel-control-center
+xorg-intel-settings
+rpm
+appstream-glib
+libostree
+flatpak
+flatpak-tools
+bubblewrap
 liveenv
