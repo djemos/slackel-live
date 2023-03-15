@@ -95,6 +95,8 @@ gmrun
 gnome-mime-data
 gnome-themes-extra
 gnome-vfs
+ORBit2
+libbonobo
 gnsu
 gobject-introspection
 graphene
