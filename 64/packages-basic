@@ -95,6 +95,8 @@ gmrun
 gnome-mime-data
 gnome-themes-extra
 gnome-vfs
+ORBit2
+libbonobo
 gnsu
 gobject-introspection
 graphene
@@ -338,7 +340,6 @@ python-cryptography
 python-distro
 python-idna
 python-notify2
-python-pycparser
 python-pycparser
 python-requests
 python-setuptools
