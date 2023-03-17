@@ -3,9 +3,11 @@ GConf
 LibRaw
 ModemManager
 NetworkManager
+ORBit2
 PyQt5
 SDL2
 aalib
+accountsservice
 adwaita-icon-theme
 alsa-lib
 alsa-oss
@@ -95,8 +97,6 @@ gmrun
 gnome-mime-data
 gnome-themes-extra
 gnome-vfs
-ORBit2
-libbonobo
 gnsu
 gobject-introspection
 graphene
@@ -183,6 +183,7 @@ libasyncns
 libatasmart
 libblockdev
 libbluray
+libbonobo
 libbytesize
 libcaca
 libcanberra
