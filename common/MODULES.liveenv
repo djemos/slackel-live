@@ -3,7 +3,7 @@ hostname
 ssh
 alias
 avahi
-gdm
+lightdm
 user-settings-openbox
 dmrc-openbox
 xscreensaver-disable
