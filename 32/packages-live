@@ -16,4 +16,6 @@ libostree
 flatpak
 flatpak-tools
 bubblewrap
+install-upgrade-kernel-gtk
+install-upgrade-kernel-ext-usb-gtk
 liveenv
