@@ -53,7 +53,6 @@ libdv
 libdvdnav
 libdvdread
 libetpan
-libffado
 libfilezilla
 libgpod
 libgxps
@@ -61,7 +60,6 @@ libhangul
 libical
 libiec61883
 libisofs 
-libmms
 libmms
 libmypaint
 libreoffice
