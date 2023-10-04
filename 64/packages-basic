@@ -14,9 +14,7 @@ alsa-oss
 alsa-plugins
 alsa-utils
 appres
-at-spi2-atk
 at-spi2-core
-atk
 atkmm
 audiofile
 avahi
