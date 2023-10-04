@@ -14,9 +14,7 @@ alsa-oss
 alsa-plugins
 alsa-utils
 appres
-at-spi2-atk
 at-spi2-core
-atk
 atkmm
 audiofile
 avahi
@@ -143,7 +141,7 @@ lame
 lapack
 lcms
 lcms2
-leafpad
+l3afpad
 libFS
 libICE
 libSM
