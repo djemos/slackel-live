@@ -12,7 +12,6 @@ squashfs-tools
 syslinux
 qcontrolcenter
 slackel-control-center
-xorg-intel-settings
 rpm
 AppStream
 libxmlb
