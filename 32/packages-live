@@ -11,6 +11,8 @@ xorg-intel-settings
 qcontrolcenter
 slackel-control-center
 rpm
+AppStream
+libxmlb
 appstream-glib
 libostree
 flatpak
