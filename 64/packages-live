@@ -4,6 +4,8 @@ instonusb
 multibootusb
 gnu-efi
 gparted
+grub
+grub-scripts
 isomaster
 libdaemon
 slackware-live
