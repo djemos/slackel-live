@@ -418,7 +418,6 @@ wqy-zenhei-font-ttf
 x11-skel
 x11perf
 xauth
-xbacklight
 xbitmaps
 xcb-proto
 xcb-util
@@ -499,3 +498,4 @@ xvinfo
 xwd
 xwininfo
 xwud
+acpilight
