@@ -296,7 +296,6 @@ qcontrolcenter
 slackel-control-center
 rpm
 rpm2tgz
-sof-firmware
 AppStream
 libxmlb
 appstream-glib
