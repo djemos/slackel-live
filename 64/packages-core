@@ -168,6 +168,7 @@ lndir
 logrotate
 lsb-release
 lsof
+sof-firmware
 lsscsi
 lvm2
 lz4
@@ -291,3 +292,19 @@ zlib
 zoo
 zstd
 pinentry
+qcontrolcenter
+slackel-control-center
+rpm
+rpm2tgz
+sof-firmware
+AppStream
+libxmlb
+appstream-glib
+libostree
+flatpak
+flatpak-tools
+bubblewrap
+meson
+ninja
+Mako
+inxi
