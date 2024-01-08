@@ -24,6 +24,9 @@ You will also need to have syslinux installed. If not then just install it from 
 for openbox
 git clone https://github.com/djemos/slackel-live.git 
 
+or for MATE
+git clone https://github.com/djemos/slackel-live.git -b mate 
+
 or for KDE
 git clone https://github.com/djemos/slackel-live.git -b kde 
 
