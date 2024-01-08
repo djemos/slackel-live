@@ -3,9 +3,9 @@ hostname
 ssh
 alias
 avahi
-gdm
-user-settings-openbox
-dmrc-openbox
+lightdm
+user-settings-mate
+dmrc-mate
 xscreensaver-disable
 salixlive-logo
 slackellive-installer
