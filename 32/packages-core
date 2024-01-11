@@ -297,6 +297,7 @@ qcontrolcenter
 slackel-control-center
 rpm
 rpm2tgz
+AppStream
 libxmlb
 appstream-glib
 libostree
