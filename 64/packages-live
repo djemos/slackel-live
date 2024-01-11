@@ -12,9 +12,6 @@ sli
 squashfs-tools
 syslinux
 acpilight
-Imath
-libpaper
-libdeflate
 install-upgrade-kernel-gtk
 install-upgrade-kernel-ext-usb-gtk
 liveenv
