@@ -1,11 +1,11 @@
-avahi
 gparted
 instonusb
 multibootusb
 isomaster
-libdaemon
 slackware-live
 sli
 squashfs-tools
 syslinux
+install-upgrade-kernel-gtk
+install-upgrade-kernel-ext-usb-gtk
 liveenv
