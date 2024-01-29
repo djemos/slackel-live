@@ -78,7 +78,6 @@ gcr
 gd
 gdk-pixbuf2
 gdk-pixbuf2-xlib
-gdm
 gegl
 geoclue
 gexiv2
@@ -391,7 +390,6 @@ wayland
 webkit2gtk
 webkitgtk
 wireless_tools
-wm-logout
 wmctrl
 woff2
 wpa_supplicant
