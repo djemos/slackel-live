@@ -49,6 +49,7 @@ dosfstools
 dotnew
 dvd+rw-tools
 e2fsprogs
+exfatprogs
 efivar
 elogind
 enscript
