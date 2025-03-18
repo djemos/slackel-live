@@ -286,7 +286,7 @@ mkfontscale
 mobile-broadband-provider-info
 mozilla-firefox
 mozilla-nss
-mozjs102
+mozjs128
 mtdev
 ndctl
 network-manager-applet
@@ -499,3 +499,4 @@ xwd
 xwininfo
 xwud
 mpg123
+wsdd2
