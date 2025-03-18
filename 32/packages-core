@@ -201,6 +201,7 @@ nettle
 network-scripts
 nfs-utils
 nghttp2
+nghttp3
 npth
 ntfs-3g
 ntp
