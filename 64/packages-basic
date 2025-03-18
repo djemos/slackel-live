@@ -274,7 +274,7 @@ mkfontscale
 mobile-broadband-provider-info
 mozilla-firefox
 mozilla-nss
-mozjs102
+mozjs128
 mtdev
 ndctl
 network-manager-applet
@@ -528,3 +528,4 @@ PyQt5_sip
 Imath
 libpaper
 libdeflate
+wsdd2
