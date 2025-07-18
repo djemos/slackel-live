@@ -350,7 +350,6 @@ python3
 pyxdg
 qpdf
 qt5
-qt5-webkit
 radeontool
 rarian
 rendercheck
@@ -453,7 +452,6 @@ xf86-video-s3virge
 xf86-video-savage
 xf86-video-trident
 xf86-video-vesa
-xf86-video-vmware
 xf86dga
 xfd
 xfontsel
