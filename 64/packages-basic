@@ -276,6 +276,7 @@ makedepend
 man-db
 mariadb
 mate-colors-icon-theme
+mate-icon-theme
 mate-icon-theme-faenza
 mate-notification-daemon
 menu-cache
