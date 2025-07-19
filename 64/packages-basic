@@ -503,3 +503,4 @@ protobuf
 xcb-util-cursor
 PyQt5_sip
 qt5ct
+gtkmm4
