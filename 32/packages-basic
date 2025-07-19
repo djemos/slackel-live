@@ -496,3 +496,10 @@ xwininfo
 xwud
 mpg123
 wsdd2
+qt6
+abseil-cpp
+pcsc-lite
+protobuf
+xcb-util-cursor
+PyQt5_sip
+qt5ct
