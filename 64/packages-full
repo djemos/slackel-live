@@ -142,3 +142,5 @@ mate-desktop
 gspell
 gspell-compat
 libmspack
+liblangtag
+libnumbertext
