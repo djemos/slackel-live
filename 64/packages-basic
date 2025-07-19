@@ -497,7 +497,7 @@ xwud
 mpg123
 wsdd2
 qt6
-abceil-cpp
+abseil-cpp
 pcsc-lite
 protobuf
 xcb-util-cursor
