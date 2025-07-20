@@ -508,3 +508,5 @@ cairomm1
 libsigc++3
 glibmm2
 pangomm2
+gcr4
+lzlib
