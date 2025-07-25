@@ -312,4 +312,9 @@ inxi
 userspace-rcu
 duktape
 dav1d
+libsodium
+lzlib
+dconf
+liburing
+json-glib
 
