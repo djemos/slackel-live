@@ -35,7 +35,6 @@ clearlooks-phenix
 conky
 cups
 cups-filters
-dconf
 dejavu-fonts-ttf
 desktop-file-utils
 dotconf
@@ -131,7 +130,6 @@ jansson
 jasper
 jemalloc
 json-c
-json-glib
 judy
 keybinder3
 keyutils
@@ -230,7 +228,6 @@ libseccomp
 libsecret
 libsigc++
 libsndfile
-libsodium
 libsoup
 libsoup3
 libssh
@@ -238,7 +235,6 @@ libtheora
 libtiff
 libunique
 libunwind
-liburing
 libusbmuxd
 libva
 libva-utils
@@ -508,5 +504,4 @@ libsigc++3
 glibmm2
 pangomm2
 gcr4
-lzlib
 gtk-layer-shell
