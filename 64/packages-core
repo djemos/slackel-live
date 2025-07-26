@@ -317,4 +317,5 @@ lzlib
 dconf
 liburing
 json-glib
-
+libnvme
+nvme-cli
