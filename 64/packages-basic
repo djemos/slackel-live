@@ -507,3 +507,5 @@ gcr4
 gtk-layer-shell
 simdutf
 fast_float
+ngtcp2
+openjph
