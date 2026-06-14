@@ -509,3 +509,6 @@ simdutf
 fast_float
 ngtcp2
 openjph
+Imath
+libpaper
+libdeflate
