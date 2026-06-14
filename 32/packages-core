@@ -223,7 +223,7 @@ pcmciautils
 pcre
 perl
 pidentd
-pkg-config
+pkgconf
 pkgtools
 pmake
 popt
