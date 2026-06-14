@@ -167,7 +167,7 @@ lilo
 lm_sensors
 lndir
 logrotate
-lsb-release
+lsb-release-mate
 lsof
 sof-firmware
 lsscsi
