@@ -296,7 +296,6 @@ qcontrolcenter
 slackel-control-center
 rpm
 rpm2tgz
-AppStream
 libxmlb
 appstream-glib
 libostree
@@ -312,5 +311,12 @@ dav1d
 duktape
 libproxy
 nghttp3
-libproxyduktape
-dav1d
+abseil-cpp
+aom
+appstream
+libfyaml
+pcsc-lite
+protobuf
+qt6
+xcb-util-cursor
+lzlib
