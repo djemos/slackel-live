@@ -308,5 +308,9 @@ ninja
 Mako
 inxi
 userspace-rcu
+dav1d
 duktape
+libproxy
+nghttp3
+libproxyduktape
 dav1d
