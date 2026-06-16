@@ -112,7 +112,6 @@ salix-update-notifier
 simple-scan
 slang1
 smplayer
-smtube
 sox
 sshfs
 taglib
@@ -131,3 +130,15 @@ xvidcore
 yajl
 zd1211-firmware
 zenity
+libunibreak
+libplacebo
+mujs
+luajit
+libdisplay-info
+liblangtag
+cfitsio
+openblas
+suitesparse
+lensfun
+gspell
+libmspack
