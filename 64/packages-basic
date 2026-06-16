@@ -108,7 +108,6 @@ gtk+2
 gtk+3
 gtk-engines
 gtk4
-gtkman
 gtkmm2
 gtkmm3
 gvfs
@@ -533,3 +532,10 @@ libhandy
 gjs
 libproxy
 libXpresent
+gtkmm4
+cairomm1
+libsigc++3
+glibmm2
+pangomm2
+colord
+gcr4
