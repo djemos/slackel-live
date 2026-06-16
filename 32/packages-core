@@ -95,6 +95,7 @@ gnupg2
 gnutls
 gperf
 gpgme
+gpgmepp
 gpm
 gptfdisk
 grep
