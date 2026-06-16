@@ -4,6 +4,8 @@ instonusb
 multibootusb
 grub
 grub-scripts
+libnvme
+nvme-cli
 isomaster
 slackware-live
 sli
