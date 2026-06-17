@@ -62,17 +62,13 @@ modules=$startdir/modules
 
 mkdir -p $packagesdirectory $rootdirectory $modules 
 
-if [ `uname -m` == "x86_64" ]; then
+#if [ `uname -m` == "x86_64" ]; then
     echo kernel-headers > $packageslistfile
     echo kernel-generic >> $packageslistfile
-    echo kernel-modules >> $packageslistfile
-else
-    echo kernel-headers > $packageslistfile
-    echo kernel-generic >> $packageslistfile
-    echo kernel-modules >> $packageslistfile  
-    echo kernel-generic-smp >> $packageslistfile
-    echo kernel-modules-smp >> $packageslistfile
-fi
+#else
+#    echo kernel-headers > $packageslistfile
+#    echo kernel-generic >> $packageslistfile
+#fi
     
 if ! [ -d $packagesdirectory ]; then
 	echo "You have to create a 'packages_dir' directory with packages txz"
@@ -84,19 +80,19 @@ if ! [ -f $packageslistfile ]; then
 	exit
 fi
 
-if [ `uname -m` == "x86_64" ]; then
-	slapt-get -i --reinstall -d kernel-headers kernel-generic kernel-modules
-else
-	slapt-get -i --reinstall -d kernel-generic kernel-generic-smp kernel-modules kernel-modules-smp
-fi 
+#if [ `uname -m` == "x86_64" ]; then
+	slapt-get -i --reinstall -d kernel-headers kernel-generic
+#else
+#	slapt-get -i --reinstall -d kernel-headers kernel-generic
+#fi 
 
-if [ `uname -m` == "x86_64" ]; then
+#if [ `uname -m` == "x86_64" ]; then
 	cp /var/slapt-get/slackware64/a/* $packagesdirectory
 	cp /var/slapt-get/slackware64/d/* $packagesdirectory
-else
-	cp /var/slapt-get/slackware/a/* $packagesdirectory
-	cp /var/slapt-get/slackware/d/* $packagesdirectory
-fi	
+#else
+#	cp /var/slapt-get/slackware/a/* $packagesdirectory
+#	cp /var/slapt-get/slackware/d/* $packagesdirectory
+#fi	
 
 # install packages in $rootdirectory
 echo "install packages in $rootdirectory"
@@ -112,21 +108,21 @@ build-slackware-live.sh --module $rootdirectory $modules 05-kernel.slm  -xz
 echo
 echo "==================================="
 echo "build initrd image + efi"
-if [ `uname -m` != "x86_64" ]; then
-		kv=`ls -l /boot/vmlinuz | cut -f2 -d'>' | sed s/^[^0-9]*//`
-		kvnp=`echo ${kv: 0:-4}`
-		(
-			cd /boot
-			ln -sf vmlinuz-generic-${kvnp} vmlinuz
-		)
-		build-slackware-live.sh --init / $modules $moduleslist
-		mv $modules/boot/initrd.gz $modules/boot/nosmp.gz
-		mv $modules/boot/vmlinuz $modules/boot/vmlinuznp
-		(
-			cd $modules/boot
-			ln -sf /boot/vmlinuz-generic-smp-$kv /boot/vmlinuz
-		)
-fi		
+#if [ `uname -m` != "x86_64" ]; then
+#		kv=`ls -l /boot/vmlinuz | cut -f2 -d'>' | sed s/^[^0-9]*//`
+#		kvnp=`echo ${kv: 0:-4}`
+#		(
+#			cd /boot
+#			ln -sf vmlinuz-generic-${kvnp} vmlinuz
+#		)
+#		build-slackware-live.sh --init / $modules $moduleslist
+#		mv $modules/boot/initrd.gz $modules/boot/nosmp.gz
+#		mv $modules/boot/vmlinuz $modules/boot/vmlinuznp
+#		(
+#			cd $modules/boot
+#			ln -sf /boot/vmlinuz-generic-smp-$kv /boot/vmlinuz
+#		)
+#fi		
 	build-slackware-live.sh --init / $modules $moduleslist
 # copy files to usb
 echo
