@@ -72,6 +72,7 @@ flatpak
 flatpak-tools
 flex
 floppy
+fmt
 freetype
 fuse
 gawk
@@ -157,6 +158,7 @@ libnetfilter_conntrack
 libnfnetlink
 libnl
 libnl3
+libnvme
 libogg
 libostree
 libpcap
@@ -222,6 +224,7 @@ ninja
 npth
 ntfs-3g
 ntp
+nvme-cli
 openldap
 openssh
 openssl
