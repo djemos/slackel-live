@@ -7,8 +7,6 @@ multibootusb
 gnu-efi
 grub
 grub-scripts
-libnvme
-nvme-cli
 isomaster
 slackware-live
 sli
