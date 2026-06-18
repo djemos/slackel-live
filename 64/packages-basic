@@ -525,7 +525,6 @@ libdeflate
 wsdd2
 simdutf
 fast_float
-ngtcp2
 openjph
 dconf-editor
 libhandy
