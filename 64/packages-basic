@@ -538,3 +538,10 @@ glibmm2
 pangomm2
 colord
 gcr4
+mate-tweak
+python-psutil
+python-distutils-extra
+python-setproctitle
+python-wheel
+python-pip
+nodejs
