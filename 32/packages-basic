@@ -545,3 +545,7 @@ python-setproctitle
 python-wheel
 python-pip
 nodejs
+leptonica
+libfprint
+libppd
+tesseract
